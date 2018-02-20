@@ -6,12 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 16:21:33 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/19 19:07:37 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FTLIB_H 
-#define FTLIB_H 
+#ifndef libft_H 
+#define libft_H 
 
 #include <string.h>
 
@@ -21,6 +21,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+char	*ft_strchr(const char *s, int c);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 int		ft_toupper(int a);
