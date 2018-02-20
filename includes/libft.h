@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 20:42:32 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/20 09:48:33 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 int		ft_strcmp(char *s1, char *s2);
+size_t	ft_strlen(const char *s);
 int		ft_strncmp(char *s1, char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(char *haystack, char *needle);
