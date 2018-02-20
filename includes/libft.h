@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftlib.h                                            :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 19:07:37 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/19 19:40:41 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft_H 
-#define libft_H 
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <string.h>
+# include <string.h>
 
 int		ft_atoi(char *s);
 int		ft_isalnum(int c);
@@ -24,9 +24,12 @@ int		ft_isprint(int c);
 char	*ft_strchr(const char *s, int c);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, size_t n);
+char	*ft_strnstr(char *haystack, char *needle, size_t len);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strstr(char *haystack, char *needle);
 int		ft_toupper(int a);
 int		ft_tolower(int a);
 
-#define ISSPACE(c) (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f')
+# define ISSPACE(c) (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f')
 
 #endif
