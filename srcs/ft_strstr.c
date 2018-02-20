@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 16:41:11 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 18:10:59 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/19 18:24:30 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strstr(char *haystack, char *needle)
 	if (*needle == '\0')
 		return (haystack);
 	i = 0;
-	j = 0;
 	while (haystack[i])
 	{
+		j = 0;
 		while (needle[j] && haystack[i + j]
 			&& haystack[i + j] == needle[j])
 			j++;
@@ -28,4 +28,5 @@ char	*ft_strstr(char *haystack, char *needle)
 			return (haystack + i);
 		i++;
 	}
+	return (NULL)
 }
