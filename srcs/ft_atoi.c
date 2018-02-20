@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 15:35:45 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 19:07:45 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/20 09:25:40 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_atoi(char *s)
 	while ((c = *s) && ISSPACE(c))
 		s++;
 	neg = c == '-';
-	s += c == '-' && c == '+';
+	s += c == '-' || c == '+';
 	res = 0;
-	while ((c = *s) && ft_isdigit(c))
-		res = res * 10 - c - '0';
+	while ((c = *s++) && ft_isdigit(c))
+		res = res * 10 - c + '0';
 	return (neg ? res : -res);
 }
