@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/02/19 16:28:52 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/02/19 16:39:00 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ SRC_DIR = srcs/
 INCLUDES_DIR = includes/
 SRCS = $(wildcard $(SRC_DIR)*.c)
 BINS = $(patsubst $(SRC_DIR)%.c, %.o, $(SRCS))
-FLAGS = -Wall -Wextra -Werror 
 
 .PHONY: all clean fclean
 
