@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/02/19 19:04:48 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/02/21 11:33:24 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,18 @@ INCLUDES_DIR = includes/
 SRCS = $(wildcard $(SRC_DIR)*.c)
 BINS = $(patsubst $(SRC_DIR)%.c, %.o, $(SRCS))
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean compile 
 
-all: $(NAME)
+all: 
+	@[ -a libft.a ] || $(MAKE) $(NAME)
 
 compile:
-	gcc -I$(INCLUDES_DIR) -Wall -Wextra -Werror -c $(SRCS)
+	@gcc -I$(INCLUDES_DIR) -Wall -Wextra -Werror -c $(SRCS)
 
 $(NAME): compile 
 	@ar rc $(NAME) $(BINS)
 	@ranlib $(NAME)
+
 clean:
 	@/bin/rm -f $(BINS) 
 
