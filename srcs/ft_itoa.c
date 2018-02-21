@@ -6,13 +6,13 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:08:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:22:53 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/20 16:33:06 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static size_t		ft_count_digits(int value)
+static size_t	ft_count_digits(int value)
 {
 	size_t	count;
 
@@ -25,7 +25,7 @@ static size_t		ft_count_digits(int value)
 	return (count);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	size_t	d_count;
 	char	*head;
@@ -43,7 +43,7 @@ char		*ft_itoa(int n)
 	{
 		*s++ = ABS(n % 10) + '0';
 		n /= 10;
-	} 
+	}
 	*s = '\0';
 	ft_strrev(*head == '-' ? head + 1 : head);
 	return (head);

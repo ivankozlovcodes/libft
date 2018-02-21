@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:23:36 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/20 16:35:36 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
+void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -53,7 +54,8 @@ char	*ft_strstr(char *haystack, char *needle);
 int		ft_toupper(int a);
 int		ft_tolower(int a);
 
-# define ISSPACE(c) (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == '\f')
+# define ISSPACE(c) (c == ' ' || c == '\t' || c == '\n' || ISSPACE2(c))
+# define ISSPACE2(c) (c == '\r' || c == '\v' || c == '\f')
 # define ABS(x) (((x) < 0) ? -(x) : (x))
 
 #endif
