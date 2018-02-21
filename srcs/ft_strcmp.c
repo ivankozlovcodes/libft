@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 15:51:07 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 09:12:45 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/20 18:10:09 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	unsigned char c1;
 	unsigned char c2;
