@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 18:56:57 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 08:36:48 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 09:56:33 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ static unsigned	ft_count_words(char const *s, char c)
 			s++;
 		while (*s && *s == c)
 			s++;
-		if (*s)
-			i++;
+		i++;
 	}
 	return (i);
 }
