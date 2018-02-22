@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 16:34:27 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 21:06:34 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 21:18:27 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,19 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 
 	if ((res = (t_list *)malloc(sizeof(t_list))))
 	{
-		if (!(res->content = ft_memalloc(content_size)))
-			return (NULL);
-		printf("\n%p\n%p", res, res->content);
-		res->content = content ? ft_memcpy(res->content, content, content_size) : NULL;
-		res->content_size = content ? content_size : 0;
-		res->next = NULL;
+		if (!content)
+		{
+			res->content = NULL;
+			res->content_size = 0;
+		}
+		else
+		{
+			if (!(res->content = ft_memalloc(content_size)))
+				return (NULL);
+			res->content = ft_memcpy(res->content, content, content_size);
+			res->content_size = content ? content_size : 0;
+		}
+	res->next = NULL;
 	}
 	return (res);
 }

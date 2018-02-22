@@ -6,12 +6,11 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/02/21 17:44:04 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/02/21 21:13:59 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC_DIR = srcs/
 INCLUDES_DIR = includes/
 FILES = ft_isalpha.c \
 		ft_memccpy.c \
@@ -74,14 +73,13 @@ FILES = ft_isalpha.c \
 		ft_lstmap.c
 
 OBJECTS = $(FILES:%.c=%.o)
-BINS = $(patsubst %,$(SRC_DIR)/%,$(FILES))
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(NAME):
-	@gcc -I$(INCLUDES_DIR) -Wall -Wextra -Werror -c $(BINS)
+	@gcc -I$(INCLUDES_DIR) -Wall -Wextra -Werror -c $(FILES)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
