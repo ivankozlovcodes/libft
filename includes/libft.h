@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 18:06:45 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 21:06:03 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-void				*ft_memcpy(void *dst, void *src, size_t n);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
@@ -79,6 +79,11 @@ int					ft_toupper(int a);
 int					ft_tolower(int a);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
 
 # define ISSPACE(c) (ISSPACE1(c) || ISSPACE2(c))
 # define ISSPACE1(c) (c == ' ' || c == '\t' || c == '\n')
