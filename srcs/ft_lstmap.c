@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 16:34:27 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 17:27:34 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/02/21 17:34:50 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/02/21 17:50:10 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*res;
+	t_list	*map;
+	t_list	*head;
 
-	if ((res = (t_list *)malloc(sizeof(t_list))))
+	if (!lst || !f)
+		return (NULL);
+	map = f(lst);
+	head = map;
+	lst = lst->next;
+	while (lst)
 	{
-		res->content = (void *)content;
-		res->content_size = content ? content_size : 0;
+		map = map->next;
+		map = f(lst);
+		lst = lst->next;
 	}
-	return (res);
+	return (head);
 }
