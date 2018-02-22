@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/02/21 15:55:44 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/02/21 17:09:11 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,8 @@ FILES = ft_isalpha.c \
 		ft_strmap.c \
 		ft_strnew.c \
 		ft_strsub.c \
-		ft_strrev.c 
+		ft_strrev.c \
+		ft_lstnew.c
 
 OBJECTS = $(FILES:%.c=%.o)
 BINS = $(patsubst %,$(SRC_DIR)/%,$(FILES))

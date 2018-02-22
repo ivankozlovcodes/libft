@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 08:36:47 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 17:04:22 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list		*next;
+}					t_list;
 
 int		ft_atoi(char *s);
 void	ft_bzero(void *s, size_t n);
@@ -71,6 +78,7 @@ char	*ft_strtrim(char const *s);
 int		ft_toupper(int a);
 int		ft_tolower(int a);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 # define ISSPACE(c) (ISSPACE1(c) || ISSPACE2(c))
 # define ISSPACE1(c) (c == ' ' || c == '\t' || c == '\n')
