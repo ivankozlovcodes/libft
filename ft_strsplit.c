@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 18:56:57 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 09:56:33 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/02/22 07:44:10 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/02/22 08:36:46 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,49 +15,52 @@
 static unsigned	ft_count_words(char const *s, char c)
 {
 	unsigned	i;
+	unsigned	found_word;
 
 	i = 0;
 	while (*s)
 	{
-		while (*s && *s != c)
-			s++;
+		found_word = 0;
 		while (*s && *s == c)
 			s++;
-		i++;
+		s--;
+		while (*++s && *s != c)
+			found_word = 1;
+		i += found_word;
 	}
 	return (i);
 }
 
-static char		*ft_get_word(char const **s, char c)
+static char		*ft_get_word(const char **s, char c)
 {
 	char	*start;
+	char	*res;
 
-	if (!s || !*s)
-		return (NULL);
 	while (**s && **s == c)
 		(*s)++;
 	start = (char *)*s;
 	while (**s && **s != c)
 		(*s)++;
-	return (**s ? ft_strsub(start, 0, *s - start) : NULL);
+	res = ft_strsub(start, 0, *s - start + 1);
+	res[*s - start] = 0;
+	return (res);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char		**res;
+	unsigned	words;
 	unsigned	i;
-	unsigned	count;
+	char		**res;
 
-	i = 0;
 	if (!s)
 		return (NULL);
-	count = ft_count_words(s, c);
-	if (!(res = (char **)malloc(sizeof(char *) * (count + 1))))
-		return (NULL);
-	while (i <= count)
+	words = ft_count_words(s, c);
+	if ((res = (char **)malloc(sizeof(char *) * words + 1)))
 	{
-		res[i] = ft_get_word(&s, c);
-		i++;
+		i = 0;
+		while (i < words)
+			res[i++] = ft_get_word(&s, c);
+		res[i] = NULL;
 	}
 	return (res);
 }
