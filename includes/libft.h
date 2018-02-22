@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 17:04:22 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 17:23:57 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int		ft_toupper(int a);
 int		ft_tolower(int a);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 
 # define ISSPACE(c) (ISSPACE1(c) || ISSPACE2(c))
 # define ISSPACE1(c) (c == ' ' || c == '\t' || c == '\n')
