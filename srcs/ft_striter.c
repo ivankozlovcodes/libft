@@ -6,12 +6,14 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 16:58:45 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 17:00:15 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 16:18:40 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
+	if (!s || !f)
+		return ;
 	while (s && *s)
 		f(s++);
 }

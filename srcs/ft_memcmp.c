@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 11:03:49 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 11:22:42 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 16:24:56 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char		c1;
 	unsigned char		c2;
 
+	if (!s1 && !s2)
+		return 0;
 	p1 = (const unsigned char *)s1;
 	p2 = (const unsigned char *)s2;
 	c1 = *p1;
