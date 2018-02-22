@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 18:04:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 18:12:11 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 21:34:36 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (s1 && s2)
+	if (s1)
 		return (ft_strcmp(s1, s2) == 0 ? 1 : 0);
 	return (0);
 }
