@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:08:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:33:06 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/21 21:21:44 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static size_t	ft_count_digits(int value)
 {
