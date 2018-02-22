@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/02/21 21:20:34 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/02/22 11:32:17 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,8 +85,7 @@ $(NAME):
 clean:
 	@/bin/rm -f $(OBJECTS)
 
-fclean:
-	@/bin/rm -f $(OBJECTS)
+fclean: clean
 	@/bin/rm -f $(NAME)
 
 re: fclean all
