@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:08:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 21:21:44 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/02/22 10:37:27 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ char			*ft_itoa(int n)
 	char	*s;
 
 	d_count = ft_count_digits(n);
-	if (!(s = (char *)malloc((n < 0) + d_count + 1)))
+	if (!(s = (char *)malloc(((n < 0) + d_count + 1) * sizeof(char))))
 		return (NULL);
-	if (n == 0)
-		return ("0");
 	head = s;
 	if (n < 0)
 		*s++ = '-';
+	*s++ = ABS(n % 10) + '0';
+	n /= 10;
 	while (n)
 	{
 		*s++ = ABS(n % 10) + '0';
