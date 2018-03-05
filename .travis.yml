@@ -8,8 +8,8 @@ script: make
 
 # Matrix
 os:
-	- osx
-	- linux
+  - osx
+  - linux
 
 complier:
-	-gcc
+  -gcc
