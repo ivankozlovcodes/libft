@@ -1,0 +1,15 @@
+# Travis-CI Build for ivankozlov95/libft
+# see travis-ci.org for details
+
+language: c
+
+#  Build options
+script: make
+
+# Matrix
+os:
+	- osx
+	- linux
+
+complier:
+	-gcc
