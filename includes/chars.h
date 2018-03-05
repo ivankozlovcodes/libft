@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 15:00:57 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/05 15:05:36 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/05 15:34:18 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 # include <unistd.h>
 
-void	ft_putnstr(const char *s, int size);
+void	ft_putnstr(const char *s, size_t size);
 
 #endif
