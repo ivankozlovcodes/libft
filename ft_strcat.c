@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 19:52:41 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 10:11:51 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/05 12:04:59 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	char	*head;
 
