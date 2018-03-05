@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/05 12:56:24 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/05 15:17:35 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRC_DIR = srcs/
 INC_DIR = includes/
 OBJ_DIR = obj/
 BASIC_DIR = basic/
+CHAR_DIR = chars/
 
 # compiler
 CFLAGS = -Wall -Wextra -Werror
@@ -24,6 +25,7 @@ INCLUDES = $(INC_DIR)
 
 # files
 SRC := $(wildcard $(SRC_DIR)$(BASIC_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(CHAR_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
