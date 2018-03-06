@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 16:44:19 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/05 16:57:28 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/05 19:24:05 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "numbers.h"
+#include "numbers.h"
 
 size_t		ft_nbrlen(void *p)
 {
