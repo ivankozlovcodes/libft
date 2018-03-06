@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/05 16:56:46 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/05 19:11:23 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ OBJ_DIR = obj/
 BASIC_DIR = basic/
 CHAR_DIR = chars/
 NUMBERS_DIR = numbers/
+MATH_DIR = math/
 
 # compiler
 CFLAGS = -Wall -Wextra -Werror
