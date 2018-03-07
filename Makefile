@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/05 20:14:42 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/07 10:19:44 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ OBJ_DIR = obj/
 BASIC_DIR = basic/
 CHAR_DIR = chars/
 NUMBERS_DIR = numbers/
+NUMBERS_DIR = strings/
 MATH_DIR = math/
 
 # compiler
@@ -30,6 +31,7 @@ SRC := $(wildcard $(SRC_DIR)$(BASIC_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(CHAR_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(NUMBERS_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MATH_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(STRINGS_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 

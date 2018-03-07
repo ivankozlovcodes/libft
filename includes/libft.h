@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/05 17:50:46 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/07 10:19:56 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include "chars.h"
 # include "math.h"
 # include "numbers.h"
+# include "strings.h"
 
 typedef struct		s_list
 {
