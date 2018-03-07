@@ -17,5 +17,7 @@
 
 size_t	ft_nbrlen(void *n);
 char	*ft_nbrtobase(unsigned long long n, char *base);
+char	*ft_itoa(int n);
+char	*ft_llitoa(long long int n);
 
 #endif
