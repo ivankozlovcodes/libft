@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:08:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/22 10:37:27 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/08 11:02:20 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,34 +47,4 @@ char			*ft_itoa(int n)
 	*s = '\0';
 	ft_strrev(*head == '-' ? head + 1 : head);
 	return (head);
-}
-
-char			*ft_llitoa(long long int n)
-{
-	unsigned long long int	nbr;
-	unsigned long long int	tmp;
-	int				len;
-	int				is_negative;
-	char			*str;
-
-	is_negative = n < 0 ? 1 : 0;
-	nbr = (unsigned long long int)n;
-	nbr = is_negative ? -nbr : nbr;
-	tmp = nbr;
-	len = 2;
-	while (tmp /= 10)
-		len++;
-	len += is_negative;
-	str = (char *)malloc(sizeof(char) * len);
-	if (!str)
-		return (NULL);
-	str[--len] = '\0';
-	while (len-- >= 0)
-	{
-		str[len] = nbr % 10 + '0';
-		nbr /= 10;
-	}
-	if (is_negative)
-		str[0] = '-';
-	return (str);
 }

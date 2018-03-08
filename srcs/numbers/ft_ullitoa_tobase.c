@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_llitoa_tobase.c                                 :+:      :+:    :+:   */
+/*   ft_ullitoa_tobase.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/06 18:56:20 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/08 11:01:35 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/03/08 10:52:47 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/03/08 10:53:55 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_llitoa_tobase(long long int n, char *base)
+char	*ft_ullitoa_tobase(unsigned long long int n, char *base)
 {
 	unsigned long long int	nbr;
 	int						len;
 	int						base_len;
 	char					*str;
 
-	base_len = ft_strlen(base);
-	nbr = (unsigned long long int)n;
-	nbr = n < 0 ? -nbr : nbr;
+	nbr = n;
 	len = 2;
+	base_len = ft_strlen(base);
 	while (nbr /= base_len)
 		len++;
-	nbr = (unsigned long long int)n;
-	len += n < 0;
+	nbr = n;
 	if (!(str = (char *)malloc(sizeof(char) * len)))
 		return (NULL);
 	str[--len] = '\0';
@@ -35,7 +33,5 @@ char	*ft_llitoa_tobase(long long int n, char *base)
 		str[len] = base[nbr % base_len];
 		nbr /= base_len;
 	}
-	if (n < 0)
-		str[0] = '-';
 	return (str);
 }
