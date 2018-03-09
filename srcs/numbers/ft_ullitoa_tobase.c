@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 10:52:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/08 10:53:55 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/08 19:47:57 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_ullitoa_tobase(unsigned long long int n, char *base)
 	if (!(str = (char *)malloc(sizeof(char) * len)))
 		return (NULL);
 	str[--len] = '\0';
-	while (len-- >= 0)
+	while (len-- > 0)
 	{
 		str[len] = base[nbr % base_len];
 		nbr /= base_len;
