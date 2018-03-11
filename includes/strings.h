@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/09 21:17:56 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/10 20:08:36 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stddef.h>
 
-char	*ft_strstredl(char *haystack, char *needle);
+char	*ft_strstrend(char *haystack, char *needle);
 int		ft_strchri(char *s, char c);
 char	*ft_strnewc(size_t size, char c);
 
