@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/05 15:08:37 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/20 15:20:20 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/03/20 15:19:58 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/03/20 15:20:03 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MATH_H
-# define FT_MATH_H
+#include <unistd.h>
+#include <stdio.h>
 
-# define MIN(a,b) ((a > b) ? (b) : (a))
-# define MAX(a, b) ((a) > (b) ? (a) : (b))
+int	ft_sqrt(int nb)
+{
+	int i;
+	int sq;
 
-long long int	ft_pow(int n, unsigned int p);
-int				ft_sqrt(int nb);
-
-#endif
+	i = 1;
+	sq = 1;
+	if(nb == 0)
+		return(0);
+	while (i * i < nb)
+	{
+		i++;
+	}
+	if ((nb % i) == 0)
+		return (i);
+	else
+		return(0);
+}
