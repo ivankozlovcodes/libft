@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 15:19:58 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/22 00:00:17 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/22 22:10:57 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ int	ft_sqrt(int nb)
 	if (nb == 0)
 		return (0);
 	while (i * i < nb)
-	{
 		i++;
-	}
-	if ((nb % i) == 0)
-		return (i);
-	else
-		return (0);
+	if (i * i > nb)
+		i--;
+	return (i);
 }
