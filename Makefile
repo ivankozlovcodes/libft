@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/07 12:12:42 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/22 19:29:59 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
+	@echo "\`libft\` [INFO] Library created"
 
 $(OBJ): $(SRC)
 	@mkdir -p $(OBJ_DIR)
@@ -50,10 +51,10 @@ $(OBJ): $(SRC)
 
 clean:
 	@/bin/rm -rf $(OBJ_DIR)
-	@echo "[INFO] Object folder removed"
+	@echo "\`libft\` [INFO] Object folder removed"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "[INFO] Library removed"
+	@echo "\`libft\` [INFO] Library removed"
 
 re: fclean all
