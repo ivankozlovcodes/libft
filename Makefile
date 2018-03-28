@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/27 22:36:17 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/27 22:56:07 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,15 @@ NAME = libft.a
 SRC_DIR = srcs/
 INC_DIR = includes/
 OBJ_DIR = obj/
+
+MATH_DIR = math/
+LIST_DIR = list/
 CHAR_DIR = chars/
+MEMORY_DIR = memory/
+OUTPUT_DIR = output/
 NUMBERS_DIR = numbers/
 STRINGS_DIR = strings/
-MATH_DIR = math/
-OUTPUT_DIR = output/
-LIST_DIR = list/
-MEMORY_DIR = memory/
+PRINTF_DIR = ft_printf/
 
 # compiler
 CFLAGS = -Wall -Wextra -Werror
@@ -36,6 +38,7 @@ SRC += $(wildcard $(SRC_DIR)$(MATH_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(OUTPUT_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(LIST_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MEMORY_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(PRINTF_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
@@ -46,19 +49,18 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "\`libft\` [INFO] Library created"
+	@echo "[INFO] \`libft\` Library created"
 
 $(OBJ): $(SRC)
 	@mkdir -p $(OBJ_DIR)
-	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $^
-	@mv *.o $(OBJ_DIR)
+	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $< -o $@
 
 clean:
 	@/bin/rm -rf $(OBJ_DIR)
-	@echo "\`libft\` [INFO] Object folder removed"
+	@echo "[INFO] \`libft\` Object folder removed"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "\`libft\` [INFO] Library removed"
+	@echo "[INFO] \`libft\` Library removed"
 
 re: fclean all
