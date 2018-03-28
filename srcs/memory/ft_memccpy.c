@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 12:21:10 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 12:26:23 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 20:59:38 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memccpy(void *dst, void *src, int c, size_t n)
 {

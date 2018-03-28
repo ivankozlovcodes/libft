@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 15:54:30 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 21:39:52 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:16:46 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

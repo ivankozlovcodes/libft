@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 16:48:29 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 20:48:36 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:03:41 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define FT_NUMBERS_H
 
 # include <stddef.h>
-
-# define ABS(x) (((x) < 0) ? -(x) : (x))
 
 size_t	ft_nbrlen(void *n);
 char	*ft_nbrtobase(unsigned long long n, char *base);

@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 08:30:49 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 08:32:44 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:05:00 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "output.h"
 
 void	ft_putendl(char const *s)
 {

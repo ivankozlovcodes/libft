@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 14:22:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 19:07:44 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 20:55:06 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "chars.h"
 
 int	ft_isalnum(int c)
 {

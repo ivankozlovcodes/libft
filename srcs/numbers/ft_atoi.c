@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 15:35:45 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 09:25:40 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:02:08 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "chars.h"
 
 int	ft_atoi(char *s)
 {

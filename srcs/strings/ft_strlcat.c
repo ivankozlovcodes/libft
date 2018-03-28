@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 20:46:32 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 21:45:58 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:07:27 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "strings.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

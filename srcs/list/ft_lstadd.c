@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 17:26:35 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 17:30:35 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 20:56:01 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "list.h"
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {

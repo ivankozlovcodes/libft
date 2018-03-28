@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 17:43:59 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 17:56:12 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:07:51 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "strings.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

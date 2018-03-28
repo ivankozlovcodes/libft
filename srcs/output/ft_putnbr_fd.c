@@ -6,11 +6,14 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 13:40:32 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:27:49 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:05:18 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "math.h"
+#include "strings.h"
+#include "output.h"
+#include <stdlib.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

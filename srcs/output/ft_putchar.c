@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 08:29:21 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/21 08:30:17 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:04:46 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "output.h"
 
 void	ft_putchar(char c)
 {

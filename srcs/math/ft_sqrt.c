@@ -6,12 +6,9 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 15:19:58 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/22 22:10:57 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 20:58:06 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-#include <stdio.h>
 
 int	ft_sqrt(int nb)
 {

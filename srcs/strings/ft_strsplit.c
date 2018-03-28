@@ -6,11 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 07:44:10 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/22 08:36:46 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:18:48 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "strings.h"
+#include <stdlib.h>
 
 static unsigned	ft_count_words(char const *s, char c)
 {

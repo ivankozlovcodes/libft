@@ -6,11 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 16:45:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:49:10 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:17:14 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "memory.h"
+#include <stddef.h>
 
 char	*ft_strnew(size_t size)
 {

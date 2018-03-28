@@ -6,13 +6,13 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 18:54:59 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/05 19:22:45 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:20:16 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "numbers.h"
 #include "math.h"
-#include "libft.h"
+#include "numbers.h"
+#include "strings.h"
 #include <stdlib.h>
 
 char	*ft_nbrtobase(unsigned long long n, char *base)

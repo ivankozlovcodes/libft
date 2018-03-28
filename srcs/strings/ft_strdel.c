@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 16:50:45 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:52:49 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:06:37 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "memory.h"
 
 void	ft_strdel(char **as)
 {

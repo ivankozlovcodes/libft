@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 18:15:43 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 18:26:01 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:19:35 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "strings.h"
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {

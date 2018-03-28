@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/08 10:52:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 20:52:34 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:04:23 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "strings.h"
 #include <stdlib.h>
 
 char	*ft_ullitoa_tobase(unsigned long long int n, char *base)

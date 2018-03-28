@@ -6,11 +6,9 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 18:29:19 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/19 19:38:02 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 21:06:06 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
