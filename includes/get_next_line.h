@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 22:35:35 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/02/26 18:54:31 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/02/27 22:45:09 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include "chars.h"
-# include "math.h"
-# include "numbers.h"
-# include "strings.h"
-# include "memory.h"
-# include "output.h"
-# include "list.h"
-# include "get_next_line.h"
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
+
+# define BUFF_SIZE 222
+# define FD_LIMIT 8192
+
+int		get_next_line(const int fd, char **line);
 
 #endif

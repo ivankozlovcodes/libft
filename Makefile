@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/27 20:50:23 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/27 22:36:17 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ CFLAGS = -Wall -Wextra -Werror
 INCLUDES = $(INC_DIR)
 
 # files
-SRC := $(wildcard $(SRC_DIR)$(CHAR_DIR)*.c)
+SRC := $(wildcard $(SRC_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(CHAR_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(NUMBERS_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MATH_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(OUTPUT_DIR)*.c)
