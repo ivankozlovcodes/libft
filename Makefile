@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/27 22:56:07 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/28 13:28:35 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ OBJ_DIR = obj/
 MATH_DIR = math/
 LIST_DIR = list/
 CHAR_DIR = chars/
+MATRIX_DIR = matrix/
 MEMORY_DIR = memory/
 OUTPUT_DIR = output/
 NUMBERS_DIR = numbers/
@@ -39,6 +40,7 @@ SRC += $(wildcard $(SRC_DIR)$(OUTPUT_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(LIST_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MEMORY_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(PRINTF_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(MATRIX_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
