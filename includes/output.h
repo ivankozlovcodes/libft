@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   output.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 16:35:01 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/20 16:39:05 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/03/27 20:43:40 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/03/27 20:44:34 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_OUTPUT_H
+# define FT_OUTPUT_H
+# include <stddef.h>
 
-void	*ft_memalloc(size_t size)
-{
-	void	*res;
+void				ft_putchar_fd(char c, int fd);
+void				ft_putchar(char c);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putendl(char const *s);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr(int n);
+void				ft_putstr_fd(char const *s, int fd);
+void				ft_putstr(char const *s);
 
-	if ((res = malloc(size)))
-		ft_bzero(res, size);
-	return (res);
-}
+#endif

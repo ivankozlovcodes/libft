@@ -6,11 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 18:56:20 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/08 19:47:40 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 20:52:26 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_llitoa_tobase(long long int n, char *base)
 {

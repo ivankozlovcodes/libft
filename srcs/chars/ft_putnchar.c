@@ -6,11 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 15:16:30 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/12 16:02:53 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/27 20:51:42 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_putnchar(char c, int n)
 {
