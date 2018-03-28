@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/28 13:28:35 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/03/28 15:56:06 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC += $(wildcard $(SRC_DIR)$(OUTPUT_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(LIST_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MEMORY_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(PRINTF_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(STRINGS_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MATRIX_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
@@ -55,7 +56,8 @@ $(NAME): $(OBJ)
 
 $(OBJ): $(SRC)
 	@mkdir -p $(OBJ_DIR)
-	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $< -o $@
+	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $^
+	@mv -f *.o $(OBJ_DIR)
 
 clean:
 	@/bin/rm -rf $(OBJ_DIR)
