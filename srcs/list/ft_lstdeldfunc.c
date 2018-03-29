@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 16:40:17 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/28 20:54:36 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/03/28 20:59:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 void	ft_free_content(void *data, size_t size)
 {
+	(void)size;
 	ft_memdel(&data);
 }
 
