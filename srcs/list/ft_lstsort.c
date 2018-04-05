@@ -24,7 +24,7 @@ static void	ft_lstswap(t_list *a, t_list *b)
 	b->content_size = tmp.content_size;
 }
 
-void	ft_lstsort(t_list *list, int (cmp)(t_list *a, t_list *b))
+void		ft_lstsort(t_list *list, int (cmp)(t_list *a, t_list *b))
 {
 	int		swapped;
 	t_list	*ptr;
