@@ -6,11 +6,17 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/03/28 15:56:06 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/04/08 13:50:47 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+# colors
+NO_COLOR=\x1b[0m
+OK_COLOR=\x1b[32;01m
+ERROR_COLOR=\x1b[31;01m
+WARN_COLOR=\x1b[33;01m
 
 # directories
 SRC_DIR = srcs/
@@ -33,7 +39,7 @@ CFLAGS = -Wall -Wextra -Werror
 INCLUDES = $(INC_DIR)
 
 # files
-SRC := $(wildcard $(SRC_DIR)*.c)
+SRC := $(wildcard $(SRC_DIR)$(GNL_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(CHAR_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(NUMBERS_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MATH_DIR)*.c)
@@ -48,12 +54,13 @@ OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
 .PHONY: all clean fclean re
 
-all: $(NAME)
+all: 
+	@make $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "[INFO] \`libft\` Library created"
+	@echo "$(OK_COLOR)[INFO] Library libft created$(NO_COLOR)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)*/%.c
 	@mkdir -p $(OBJ_DIR)
@@ -64,10 +71,10 @@ $(OBJ_DIR)%.o: $(SRC_DIR)*/%.c
 
 clean:
 	@/bin/rm -rf $(OBJ_DIR)
-	@echo "[INFO] \`libft\` Object folder removed"
+	@echo "$(OK_COLOR)[INFO] Object folder removed$(NO_COLOR)"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "[INFO] \`libft\` Library removed"
+	@echo "$(OK_COLOR)[INFO] Library libft removed$(NO_COLOR)"
 
 re: fclean all
