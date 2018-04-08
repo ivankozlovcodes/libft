@@ -16,7 +16,7 @@ As it says in [Project's pdf][1], there are 4 setions:
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation.
 4.  **Personal Functions:** Functions I believe will be useful later.
 
-However, I've decided reorganize and comdined functions to several folders:
+However, I've decided reorganize and combined functions to several folders:
 
 1. **chars:** Basic functions to work with _char_ type
 2. **get_next_line:** GNL project integrated into libft for convenience. See [project page][GNL]
@@ -27,7 +27,7 @@ However, I've decided reorganize and comdined functions to several folders:
 7. **list:** Functions for manipulations with linked lists.
 8. **matrix:** Functions for manipulation with generic matrix. See [notes](#notes)
 9. **numbers:** Functions related to integer number types(shor, int etc.).
-10. **strings:** Part of <string.h> functions and addition function I deemed useful to work with string.
+10. **strings:** Part of <string.h> functions and addition functions which I deemed useful to work with string.
 
 ## Example usage
 
