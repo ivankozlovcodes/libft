@@ -17,15 +17,16 @@ SRC_DIR = srcs/
 INC_DIR = includes/
 OBJ_DIR = obj/
 
-MATH_DIR = math/
-LIST_DIR = list/
-CHAR_DIR = chars/
-MATRIX_DIR = matrix/
-MEMORY_DIR = memory/
-OUTPUT_DIR = output/
-NUMBERS_DIR = numbers/
-STRINGS_DIR = strings/
-PRINTF_DIR = ft_printf/
+MATH_DIR	= math/
+LIST_DIR	= list/
+CHAR_DIR	= chars/
+MATRIX_DIR	= matrix/
+MEMORY_DIR	= memory/
+OUTPUT_DIR	= output/
+NUMBERS_DIR	= numbers/
+STRINGS_DIR	= strings/
+PRINTF_DIR	= ft_printf/
+GNL_DIR		= get_next_line/
 
 # compiler
 CFLAGS = -Wall -Wextra -Werror
