@@ -55,10 +55,12 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 	@echo "[INFO] \`libft\` Library created"
 
-$(OBJ): $(SRC)
+$(OBJ_DIR)%.o: $(SRC_DIR)*/%.c
 	@mkdir -p $(OBJ_DIR)
-	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $^
-	@mv -f *.o $(OBJ_DIR)
+	@echo "$(WARN_COLOR)Compiling $< $(NO_COLOR)"
+	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $< -o $@ 2> temp.log || touch temp.error
+	@if test -s temp.log; then echo "$(ERROR_COLOR)Error in $<\n$(NO_COLOR)" && cat temp.log; fi;
+	@rm -f temp.error temp.log
 
 clean:
 	@/bin/rm -rf $(OBJ_DIR)
