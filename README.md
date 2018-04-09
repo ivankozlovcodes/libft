@@ -6,6 +6,9 @@
 * [What's in it?](#whats-in-it)
 * [How does it work?](#how-does-it-work)
 * [Example usage](#example-usage)
+* [Testing](#tests)
+	1. [Unit tests](#unit-tests)
+	2. [Manual tests](#manual-tests)
 
 ## What is libft?
 [Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
@@ -20,6 +23,8 @@ According to [project's pdf][1] there should be 4 sections:
 2.  **Additional functions:** Functions 42 deems will be useful for later projects.
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation.
 4.  **Personal Functions:** Functions I believe will be useful later.
+
+# Classification
 
 However, I've decided reorganize and combined functions to several folders:
 
@@ -46,7 +51,7 @@ My code is not the best, but it passed all the 42 tests successfully and I succe
 
 The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
 
-To create that library, after downloading/cloning this project, **cd** into the project, copy all the files from the sub folders to the root directory and finally, call make:
+To create that library, after downloading/cloning this project, **cd** into the project and call make:
 
 	git clone https://github.com/IvanKozlov95/libft
 	cd libft
@@ -54,7 +59,53 @@ To create that library, after downloading/cloning this project, **cd** into the 
 
 You should see a *libft.a* file and some object files (.o).
 
-That's it! If you're having some problems, just send me an email here: ikozlov@student.42.us.org. If you think your problem is due to my code or this README, [create a new issue][3]. I'll definitely check it out.
+That's it! If you're having some problems, just send me an email here: ikozlov@student.42.us.org. If you're 42 student fill free to message me on slack. If you think your problem is due to my code or this README, [create a new issue][3]. I'll definitely check it out.
+
+### Tests
+
+## Unit tests
+
+To test the code we're going to be using @alelievr's [Libft Unit Test][4].
+
+1. Clone this repo, make sure it's called `libft`:
+
+	git clone https://github.com/IvanKozlov95/libft libft
+
+2. Clone @alelievr's test repo:
+
+	git clone https://github.com/alelievr/libft-unit-test
+
+3. Go into the test folder and run the test:
+
+	cd libft-unit-test
+	make f
+
+If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
+## Manual tests
+
+I added an example file called **hello_world.c** in **srcs/test** folder, it's using the function **ft_printf** to print "Hello world!" to the screen.
+
+To get the output follow steps below:
+
+1. Inside project directory run make command:
+
+	make
+
+2. Compile srcs/test/hello_world.c explicitly specifying ft library and includes directory:
+
+	gcc srcs/test/hello_world.c -L . -l ft -I includes
+
+3. Run the a.out executable:
+
+	./a.out
+
+If you did everything right you will see this output:
+
+```sh
+$ Hello world!
+```
+
+Fill free to modify test file or add your own. Don't forget to add header to the c files. All header are in _includes/_ directory and have the same name as [classifications](#classification) above.
 
 ## Example usage
 
@@ -69,6 +120,7 @@ This is a list of my projects that use Libft extensively:
 [1]: https://github.com/IvanKozlov95/libft/blob/master/libft.en.pdf
 [2]: http://42.us.org "42 USA"
 [3]: https://github.com/IvanKozlov95/libft/issues/new "New issue"
+[4]: https://github.com/alelievr/libft-unit-test "alelievr/libft-unit-test"
 [GNL]: https://github.com/IvanKozlov95/get_next_line
 [printf]: https://github.com/IvanKozlov95/ft_printf
 [mock]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
