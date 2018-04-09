@@ -3,7 +3,7 @@
 ### TOC
 
 * [What is libft?](#what-is-libft)
-* [What's in it?](#whats-in-it)
+* [What's in it?](#what-is-in-it)
 * [How does it work?](#how-does-it-work)
 * [Example usage](#example-usage)
 * [Testing](#tests)
@@ -39,7 +39,7 @@ However, I've decided reorganize and combined functions to several folders:
 9. **numbers:** Functions related to integer number types(shor, int etc.).
 10. **strings:** Part of <string.h> functions and addition functions which I deemed useful to work with string.
 
-My code is not the best, but it passed all the 42 tests successfully and I successfully used in my [other 42 projects][#Example usage]
+My code is not the best, but it passed all the 42 tests successfully and I successfully used in my [other 42 projects](#example-usage)
 
 # Notes:
 
@@ -59,7 +59,7 @@ To create that library, after downloading/cloning this project, **cd** into the 
 
 You should see a *libft.a* file and some object files (.o).
 
-That's it! If you're having some problems, just send me an email here: ikozlov@student.42.us.org. If you're 42 student fill free to message me on slack. If you think your problem is due to my code or this README, [create a new issue][3]. I'll definitely check it out.
+That's it! If you're having some problems, just send me an email here: _ikozlov@student.42.us.org_. If you're 42 student fill free to message me on slack. If you think your problem is due to my code or this README, [create a new issue][3]. I'll definitely check it out.
 
 ### Tests
 
@@ -69,16 +69,16 @@ To test the code we're going to be using @alelievr's [Libft Unit Test][4].
 
 1. Clone this repo, make sure it's called `libft`:
 
-	git clone https://github.com/IvanKozlov95/libft libft
+		git clone https://github.com/IvanKozlov95/libft libft
 
 2. Clone @alelievr's test repo:
 
-	git clone https://github.com/alelievr/libft-unit-test
+		git clone https://github.com/alelievr/libft-unit-test
 
 3. Go into the test folder and run the test:
 
-	cd libft-unit-test
-	make f
+		cd libft-unit-test
+		make f
 
 If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
 ## Manual tests
@@ -89,15 +89,15 @@ To get the output follow steps below:
 
 1. Inside project directory run make command:
 
-	make
+		make
 
 2. Compile srcs/test/hello_world.c explicitly specifying ft library and includes directory:
 
-	gcc srcs/test/hello_world.c -L . -l ft -I includes
+		gcc srcs/test/hello_world.c -L . -l ft -I includes
 
 3. Run the a.out executable:
 
-	./a.out
+		./a.out
 
 If you did everything right you will see this output:
 
