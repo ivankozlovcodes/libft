@@ -38,6 +38,7 @@ However, I've decided reorganize and combined functions to several folders:
 8. **matrix:** Functions for manipulation with generic matrix. See [notes](#notes)
 9. **numbers:** Functions related to integer number types(shor, int etc.).
 10. **strings:** Part of <string.h> functions and addition functions which I deemed useful to work with string.
+11. **structures**: My implementation of some data structures(queue, stack etc.)
 
 My code is not the best, but it passed all the 42 tests successfully and I successfully used in my [other 42 projects][#Example usage]
 
