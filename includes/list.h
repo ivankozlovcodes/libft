@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:44:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/04 16:09:37 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/09 14:01:34 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,22 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+/*
+**	t_list **lst;
+**	t_list *tmp;
+**
+**	tmp = ft_lstnew(data, sizeof(data));
+**	if (!*list)
+**		*list = tmp;
+**	else
+**		ft_lstaddback(list, tmp);
+**
+**	Macro replaces last 4 lines
+**	LST_ADDCREATE(list, tmp)
+*/
+
+# define LST_ADDCREATE(l, t) (!l ? *l = t : ft_lstaddback(l, t))
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
