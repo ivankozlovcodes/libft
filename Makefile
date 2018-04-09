@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/04/08 13:50:47 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/04/08 18:05:42 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,16 +23,17 @@ SRC_DIR = srcs/
 INC_DIR = includes/
 OBJ_DIR = obj/
 
-MATH_DIR	= math/
-LIST_DIR	= list/
-CHAR_DIR	= chars/
-MATRIX_DIR	= matrix/
-MEMORY_DIR	= memory/
-OUTPUT_DIR	= output/
-NUMBERS_DIR	= numbers/
-STRINGS_DIR	= strings/
-PRINTF_DIR	= ft_printf/
-GNL_DIR		= get_next_line/
+MATH_DIR		= math/
+LIST_DIR		= list/
+CHAR_DIR		= chars/
+MATRIX_DIR		= matrix/
+MEMORY_DIR		= memory/
+OUTPUT_DIR		= output/
+NUMBERS_DIR		= numbers/
+STRINGS_DIR		= strings/
+PRINTF_DIR		= ft_printf/
+GNL_DIR			= get_next_line/
+STRUCTURES_DIR	= structures/
 
 # compiler
 CFLAGS = -Wall -Wextra -Werror
@@ -49,6 +50,7 @@ SRC += $(wildcard $(SRC_DIR)$(MEMORY_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(PRINTF_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(STRINGS_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MATRIX_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(STRUCTURES_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
