@@ -3,4 +3,3 @@ build.sh
 *.o
 *.out
 *.a
-test/
