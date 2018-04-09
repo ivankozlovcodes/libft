@@ -83,7 +83,7 @@ To test the code we're going to be using @alelievr's [Libft Unit Test][4].
 If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
 ## Manual tests
 
-I added an example file called **hello_world.c** in **srcs/test** folder, it's using the function **ft_printf** to print "Hello world!" to the screen.
+I added an example file called **hello_world.c** in **srcs/test** folder, it's using the function **ft_printf** to print "Hello world!" on the screen.
 
 To get the output follow steps below:
 
