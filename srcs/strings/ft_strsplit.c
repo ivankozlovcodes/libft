@@ -6,31 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 07:44:10 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 21:18:48 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/09 13:54:49 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "strings.h"
 #include <stdlib.h>
-
-static unsigned	ft_count_words(char const *s, char c)
-{
-	unsigned	i;
-	unsigned	found_word;
-
-	i = 0;
-	while (*s)
-	{
-		found_word = 0;
-		while (*s && *s == c)
-			s++;
-		s--;
-		while (*++s && *s != c)
-			found_word = 1;
-		i += found_word;
-	}
-	return (i);
-}
 
 static char		*ft_get_word(const char **s, char c)
 {

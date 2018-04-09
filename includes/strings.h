@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 20:42:28 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/09 13:54:34 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ char				*ft_strstr(char *haystack, char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+unsigned			ft_count_words(char const *s, char c);
 
 #endif
