@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 18:54:31 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/02/27 22:45:09 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/08 18:20:11 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include "libft.h"
 
-# define BUFF_SIZE 222
+# define BUFF_SIZE 1
 # define FD_LIMIT 8192
 
 int		get_next_line(const int fd, char **line);
