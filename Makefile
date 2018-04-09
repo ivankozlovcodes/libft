@@ -6,7 +6,7 @@
 #    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/04/08 21:46:32 by ikozlov          ###   ########.fr        #
+#    Updated: 2018/04/08 21:55:26 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,14 +73,14 @@ $(OBJ_DIR)%.o: $(SRC_DIR)*/%.c
 
 clean:
 	@if [ -d "./$(OBJ_DIR)" ]; then\
-		@rm -rf $(OBJ_DIR);\
-		@echo "$(OK_COLOR)[INFO] Object folder removed$(NO_COLOR)"
+		rm -rf $(OBJ_DIR);\
+		echo "$(OK_COLOR)[INFO] Object folder removed$(NO_COLOR)";\
 	fi;
 
 fclean: clean
 	@if test -e $(NAME); then\
-		@/bin/rm -f $(NAME);\
-		@echo "$(OK_COLOR)[INFO] Library libft removed$(NO_COLOR)";\
+		/bin/rm -f $(NAME);\
+		echo "$(OK_COLOR)[INFO] Library libft removed$(NO_COLOR)";\
 	fi;
 
 re: fclean all
