@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:44:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/09 14:01:34 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/09 19:30:33 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct		s_list
 **	LST_ADDCREATE(list, tmp)
 */
 
-# define LST_ADDCREATE(l, t) (!l ? *l = t : ft_lstaddback(l, t))
+# define LST_ADDCREATE(l, t) (!l ? l = t : ft_lstaddback(&l, t))
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
