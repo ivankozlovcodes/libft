@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:08:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 21:02:30 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/13 22:37:53 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "math.h"
+#include "ft_math.h"
 #include "strings.h"
 #include <stdlib.h>
 
