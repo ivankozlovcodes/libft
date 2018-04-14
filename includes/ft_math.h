@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 15:08:37 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/10 20:42:24 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/13 21:38:22 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define MAX(a, b) ((a) > (b) ? (a) : (b))
 # define DISTANCE(a,b,c,d) (ft_sqrt(ft_pow(c - a, 2) + ft_pow(d - b, 2)))
 # define ABS(x) (((x) < 0) ? -(x) : (x))
+# define SIGN(x) (x == 0 ? 0 : x > 0 ? 1 : -1)
 # define SETX(p, _x) ((p->x = _x) || 1)
 # define SETY(p, _y) ((p->y = _y) || 1)
 # define SETZ(p, _z) ((p->z = _z) || 1)
