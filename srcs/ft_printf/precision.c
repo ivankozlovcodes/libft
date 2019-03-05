@@ -6,12 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/11 18:40:57 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 22:40:15 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "strings.h"
+#include "ftstring.h"
 
 int		apply_precision_nbr(t_finfo *fmt, char *output, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 15:16:30 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 21:01:32 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/05 03:33:13 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "strings.h"
+#include "ftstring.h"
 #include "output.h"
 #include <stdlib.h>
 

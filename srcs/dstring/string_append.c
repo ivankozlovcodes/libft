@@ -6,13 +6,13 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/16 23:39:06 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/06/17 00:03:04 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "bool.h"
-#include "strings.h"
+#include "ftstring.h"
 #include "memory.h"
 #include "dstring.h"
 
