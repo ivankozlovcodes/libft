@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:44:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/09 19:30:33 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/07 19:37:51 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ t_list				*ft_lstdelfirst(t_list **list, void (*del)(void *, size_t));
 void				ft_lstaddlst(t_list **al, t_list *bl);
 void				ft_lstaddback(t_list **alst, t_list *new);
 void				ft_lstsort(t_list *list, int (cmp)(t_list *a, t_list *b));
+void				ft_lstsortascdesc(t_list *list,
+								int (cmp)(t_list *a, t_list *b), int asc);
 int					ft_lsthas(t_list *list, t_list *el,
 								int (cmp)(t_list *a, t_list *b));
 size_t				ft_lstcount(t_list *l);
