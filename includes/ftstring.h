@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
-# define FT_STRINGS_H
+#ifndef FT_FTSTRING_H
+# define FT_FTSTRING_H
 # include <stddef.h>
 
 # define SPACE " "
