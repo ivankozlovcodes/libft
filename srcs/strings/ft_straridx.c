@@ -6,11 +6,11 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 15:58:27 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/04/28 00:44:47 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/04/28 00:52:09 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "strings.h"
+#include "ftstring.h"
 
 /*
 **	Returns index of string s in array strings

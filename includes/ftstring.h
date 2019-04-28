@@ -6,12 +6,12 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/04/28 00:48:15 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/04/28 00:51:55 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
-# define FT_STRINGS_H
+#ifndef FT_FTSTRING_H
+# define FT_FTSTRING_H
 # include <stddef.h>
 
 # define SPACE " "
