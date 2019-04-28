@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 19:06:29 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/05 20:17:41 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/04/27 22:26:19 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ long long int	ft_pow(int n, unsigned int p)
 	res = (long long int)n;
 	i = 0;
 	while (++i < p)
-		res *= res;
+		res *= n;
 	return (res);
 }
