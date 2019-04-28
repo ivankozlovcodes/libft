@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   strings.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/09 13:54:34 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/04/27 16:03:00 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
+	#ifndef FT_STRINGS_H
 # define FT_STRINGS_H
 # include <stddef.h>
 
@@ -47,6 +47,7 @@ char				*ft_strstr(char *haystack, char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+int					ft_straridx(char *s, char **strings);
 unsigned			ft_count_words(char const *s, char c);
 
 #endif
