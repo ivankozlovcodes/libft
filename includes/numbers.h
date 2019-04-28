@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   numbers.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 16:48:29 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/31 23:22:53 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/04/28 00:38:49 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 # include <stddef.h>
 
-size_t	ft_nbrlen(void *n);
-char	*ft_nbrtobase(unsigned long long n, char *base);
-char	*ft_itoa(int n);
-int		ft_atoi(char *s);
-char	*ft_llitoa(long long int n);
-char	*ft_llitoa_tobase(long long int n, char *base);
-char	*ft_ullitoa_tobase(unsigned long long int n, char *base);
-int		to_little_endian(int c);
-int		is_in_arr(int *a, int size, int el);
+size_t			ft_nbrlen(void *n);
+char			*ft_nbrtobase(unsigned long long n, char *base);
+char			*ft_itoa(int n);
+int				ft_atoi(char *s);
+char			*ft_llitoa(long long int n);
+char			*ft_llitoa_tobase(long long int n, char *base);
+char			*ft_ullitoa_tobase(unsigned long long int n, char *base);
+int				to_little_endian(int c);
+int				is_in_arr(int *a, int size, int el);
+unsigned int	left_rotate(unsigned int val, unsigned int shift);
 
 #endif
