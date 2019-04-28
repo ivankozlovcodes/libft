@@ -6,11 +6,11 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 10:53:32 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 21:06:51 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "strings.h"
+#include "ftstring.h"
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s1)

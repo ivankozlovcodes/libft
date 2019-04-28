@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   string_append.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 13:45:36 by ikozlov           #+#    #+#             */
+/*   Created: 2018/06/16 23:39:06 by ikozlov           #+#    #+#             */
 /*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include "bool.h"
 #include "ftstring.h"
-#include <unistd.h>
+#include "memory.h"
+#include "dstring.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+t_bool		string_append(struct s_string *s, char *add)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	size_t	len;
+	size_t	capacity;
+
+	len = ft_strlen(add);
+	capacity = s->capacity;
+	while (capacity < len + s->length + 1)
+		capacity *= 2;
+	if (capacity > s->capacity)
+	{
+		s->capacity = capacity;
+		s->content = ft_realloc(s->content, s->length, s->capacity);
+		if (!s->content)
+			return (FALSE);
+	}
+	else
+		ft_strcpy(s->content + s->length, add);
+	s->length += len;
+	return (TRUE);
 }

@@ -6,12 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 15:08:12 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/13 22:54:33 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
-#include "strings.h"
+#include "ftstring.h"
 #include <stdlib.h>
 
 static size_t	ft_count_digits(int value)

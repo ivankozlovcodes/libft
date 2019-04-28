@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   string_destroy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 13:45:36 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/06/16 23:51:04 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/06/16 23:53:43 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftstring.h"
-#include <unistd.h>
+#include "bool.h"
+#include "dstring.h"
+#include <stdlib.h>
 
-void	ft_putstr_fd(char const *s, int fd)
+char	*string_destroy(t_string *s, t_bool save_content)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	char	*tmp;
+
+	tmp = s->content;
+	if (!save_content)
+	{
+		free(tmp);
+		tmp = NULL;
+	}
+	free(s);
+	return (tmp);
 }

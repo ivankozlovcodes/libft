@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   string_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 13:45:36 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/06/16 23:33:51 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/06/16 23:39:04 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftstring.h"
-#include <unistd.h>
+#include <stdlib.h>
+#include "dstring.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+t_string	*string_init(size_t capacity)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	t_string	*s;
+
+	if (capacity <= 0)
+		capacity = DEFAULT_CAPACITY;
+	s = malloc(sizeof(t_string));
+	s->capacity = capacity;
+	s->content = malloc(sizeof(char) * s->capacity);
+	s->length = 0;
+	return (s);
 }

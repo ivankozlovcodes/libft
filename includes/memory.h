@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:40:51 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/04/27 13:16:08 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/04/28 00:48:26 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memdup(const void *src, size_t n);
 int					ft_free(int count, ...);
+void				*ft_realloc(void *ptr, size_t size, size_t newsize);
 
 #endif

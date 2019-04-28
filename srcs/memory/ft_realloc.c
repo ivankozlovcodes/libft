@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 13:45:36 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/06/16 23:40:16 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/06/16 23:50:42 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftstring.h"
-#include <unistd.h>
+#include "memory.h"
+#include <stdlib.h>
 
-void	ft_putstr_fd(char const *s, int fd)
+void	*ft_realloc(void *ptr, size_t size, size_t newsize)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	void	*newptr;
+
+	if (!ptr)
+		return (NULL);
+	newptr = malloc(sizeof(newsize));
+	if (!newptr)
+		return (NULL);
+	ft_bzero(newptr, newsize);
+	ft_memcpy(newptr, ptr, size);
+	return (newptr);
 }

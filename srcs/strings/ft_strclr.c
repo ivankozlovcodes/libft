@@ -6,12 +6,12 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 16:53:38 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 21:06:20 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "memory.h"
-#include "strings.h"
+#include "ftstring.h"
 
 void	ft_strclr(char *s)
 {

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   bool.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 13:45:36 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/03/05 03:32:07 by ikozlov          ###   ########.fr       */
+/*   Created: 2018/06/16 23:47:45 by ikozlov           #+#    #+#             */
+/*   Updated: 2018/06/17 00:05:24 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftstring.h"
-#include <unistd.h>
+#ifndef FT_BOOL_H
+# define FT_BOOL_H
 
-void	ft_putstr_fd(char const *s, int fd)
-{
-	if (s)
-		write(fd, s, ft_strlen(s));
-}
+# include <stddef.h>
+
+# define TRUE 1
+# define FALSE 2
+
+typedef unsigned char	t_bool;
+
+#endif
