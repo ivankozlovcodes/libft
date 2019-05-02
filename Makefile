@@ -69,7 +69,7 @@ $(NAME): $(OBJ)
 $(OBJ_DIR)%.o: $(SRC_DIR)*/%.c
 	@mkdir -p $(OBJ_DIR)
 	@echo "$(WARN_COLOR)Compiling $< $(NO_COLOR)"
-	@gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $< -o $@ 2> temp.log || touch temp.error
+	@gcc $(CFLAGS) -I $(INCLUDES) -c $< -o $@ 2> temp.log || touch temp.error
 	@if test -s temp.log; then echo "$(ERROR_COLOR)Error in $<\n$(NO_COLOR)" && cat temp.log; fi;
 	@rm -f temp.error temp.log
 
