@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   string_destroy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/16 23:51:04 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/06/16 23:53:43 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/05/02 12:10:29 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*string_destroy(t_string *s, t_bool save_content)
 	char	*tmp;
 
 	tmp = s->content;
-	if (!save_content)
+	if (save_content == FALSE)
 	{
 		free(tmp);
 		tmp = NULL;
