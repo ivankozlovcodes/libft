@@ -23,6 +23,7 @@ char			*ft_llitoa(long long int n);
 char			*ft_llitoa_tobase(long long int n, char *base);
 char			*ft_ullitoa_tobase(unsigned long long int n, char *base);
 int				to_little_endian(int c);
+size_t			to_le_64(size_t be);
 int				is_in_arr(int *a, int size, int el);
 unsigned int	left_rotate(unsigned int val, unsigned int shift);
 
