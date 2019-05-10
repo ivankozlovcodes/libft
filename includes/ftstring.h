@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/04 11:33:55 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/09 19:21:09 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 # define FT_FTSTRING_H
 # include <stddef.h>
 
+# include <unistd.h>
+
 # define SPACE " "
 # define NEW_LINE "\n"
+# define CLEAR_SCREEN_ANSI_CODE "\e[1;1H\e[2J"
+
+# define CLEAR_SCREEN() (write(STDOUT_FILENO, CLEAR_SCREEN_ANSI_CODE, 12))
 
 char				*ft_strstrend(char *haystack, char *needle);
 int					ft_strchri(char *s, char c);
