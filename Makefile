@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
+#    By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2018/06/16 23:56:54 by ikozlov          ###   ########.fr        #
+#    Updated: 2019/05/23 18:15:24 by ivankozlov       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ STRINGS_DIR		= strings/
 PRINTF_DIR		= ft_printf/
 GNL_DIR			= get_next_line/
 STRUCTURES_DIR	= structures/
-DSTRING_DIR = dstring/
+DSTRING_DIR		= dstring/
+DICT_DIR		= dictionary/
 
 # compiler
 CFLAGS = -Wall -Wextra -Werror
@@ -53,6 +54,7 @@ SRC += $(wildcard $(SRC_DIR)$(STRINGS_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(MATRIX_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(STRUCTURES_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(DSTRING_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(DICT_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
