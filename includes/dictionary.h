@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 18:08:13 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/24 20:05:08 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/24 22:40:20 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ struct							s_dict
 typedef struct s_dict			t_dict;
 
 t_dict							*dict_init(size_t capacity);
+void							dict_destroy(t_dict *d);
 size_t							dict_index_of(t_dict *d, char *key);
 bool							dict_insert(t_dict *d, char *key, void *val);
 void							dict_remove(t_dict *d, char *key);
