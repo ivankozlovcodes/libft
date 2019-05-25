@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 18:08:13 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/24 19:45:01 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/24 20:05:08 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_dict							*dict_init(size_t capacity);
 size_t							dict_index_of(t_dict *d, char *key);
 bool							dict_insert(t_dict *d, char *key, void *val);
 void							dict_remove(t_dict *d, char *key);
+void							*dict_find(t_dict *d, char *key);
 
 void							dict_print(t_dict *d, const char *format);
 
