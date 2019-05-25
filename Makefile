@@ -6,7 +6,7 @@
 #    By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2019/05/23 18:15:24 by ivankozlov       ###   ########.fr        #
+#    Updated: 2019/05/24 19:37:47 by ivankozlov       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,12 @@ DSTRING_DIR		= dstring/
 DICT_DIR		= dictionary/
 
 # compiler
-CFLAGS = -Wall -Wextra -Werror
+ifeq (${C_ENV}, DEV)
+	FLAGS = -g
+else ifeq (${C_ENV}, PROD)
+	FLAGS = -Wall -Wextra -Werror
+endif
+CFLAGS = $(FLAGS)
 INCLUDES = $(INC_DIR)
 
 # files
