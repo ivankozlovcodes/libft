@@ -45,4 +45,7 @@ void							*dict_find(t_dict *d, char *key);
 
 void							dict_print(t_dict *d, const char *format);
 
+char							**dict_to_darr(t_dict *d,
+	char *(pair_to_str)(t_dict_pair));
+
 #endif
