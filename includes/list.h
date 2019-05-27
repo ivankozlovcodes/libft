@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:44:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/03/07 19:37:51 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/05/27 07:28:15 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void				ft_lstsortascdesc(t_list *list,
 int					ft_lsthas(t_list *list, t_list *el,
 								int (cmp)(t_list *a, t_list *b));
 size_t				ft_lstcount(t_list *l);
+void				**lst_to_darr(t_list *alst);
 
 void				ft_save_content(void *data, size_t size);
 void				ft_free_content(void *data, size_t size);
