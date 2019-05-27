@@ -20,6 +20,8 @@
 # define NEW_LINE "\n"
 # define CLEAR_SCREEN_ANSI_CODE "\e[1;1H\e[2J"
 
+# define IS_QUOTE(c) (c == '"' || c == '\'')
+
 # define CLEAR_SCREEN() (write(STDOUT_FILENO, CLEAR_SCREEN_ANSI_CODE, 12))
 
 char				*ft_strstrend(char *haystack, char *needle);
