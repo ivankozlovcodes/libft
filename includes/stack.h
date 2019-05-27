@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   structures.h                                       :+:      :+:    :+:   */
+/*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/08 18:03:20 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/26 16:17:49 by ivankozlov       ###   ########.fr       */
+/*   Created: 2019/05/26 16:17:12 by ivankozlov        #+#    #+#             */
+/*   Updated: 2019/05/26 16:17:48 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCTURES_H
-# define STRUCTURES_H
+#ifndef STACK_H
+#define STACK_H
 
-# include "queue.h"
-# include "stack.h"
+#include <stddef.h>
+
+/*
+** Dynamic stack based on generic list
+*/
+
+void *stack_pop(void);
+void *stack_peek(void);
+void stack_init(void);
+void stack_destroy(void (*del)(void *, size_t));
+size_t stack_push(void *data, size_t size);
+void stack_print(void);
 
 #endif
