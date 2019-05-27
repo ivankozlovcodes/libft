@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/09 19:21:09 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/26 17:36:59 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,9 @@
 
 # define CLEAR_SCREEN() (write(STDOUT_FILENO, CLEAR_SCREEN_ANSI_CODE, 12))
 
-char				*ft_strstrend(char *haystack, char *needle);
-int					ft_strchri(char *s, char c);
 char				*ft_strnewc(size_t size, char c);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
-char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
@@ -50,12 +47,17 @@ char				*ft_strnstr(char *haystack, char *needle, size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strrev(char *str);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_strstr(char *haystack, char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_straridx(char *s, char **strings);
 char				*ft_strtoupper(char *string);
 unsigned			ft_count_words(char const *s, char c);
+
+int					ft_strchri(char *s, char c);
+char				*ft_strchr(const char *s, int c);
+int					ft_strchrstri(char *s1, char *s2);
+char				*ft_strstr(char *haystack, char *needle);
+char				*ft_strstrend(char *haystack, char *needle);
 
 #endif
