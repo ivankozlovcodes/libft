@@ -6,15 +6,16 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/26 17:36:59 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/26 19:38:56 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_FTSTRING_H
 # define FT_FTSTRING_H
-# include <stddef.h>
 
+# include <stddef.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 # define SPACE " "
 # define NEW_LINE "\n"
@@ -59,5 +60,7 @@ char				*ft_strchr(const char *s, int c);
 int					ft_strchrstri(char *s1, char *s2);
 char				*ft_strstr(char *haystack, char *needle);
 char				*ft_strstrend(char *haystack, char *needle);
+
+bool				strisalnum(const char *s);
 
 #endif
