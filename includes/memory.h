@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:40:51 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/23 18:34:10 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/27 10:08:59 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stddef.h>
 
 # define _SIZET(len) (sizeof(size_t) * len)
+# define NOTHING (void)0
 
 void				ft_bzero(void *s, size_t n);
 void				*ft_memalloc(size_t size);
