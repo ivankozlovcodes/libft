@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:16:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/26 19:38:56 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/28 13:20:21 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 int					ft_straridx(char *s, char **strings);
 char				*ft_strtoupper(char *string);
 unsigned			ft_count_words(char const *s, char c);
+bool				isstrspace(char *s);
 
 int					ft_strchri(char *s, char c);
 char				*ft_strchr(const char *s, int c);
