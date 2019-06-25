@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   dlstdel.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 14:25:47 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/24 22:01:08 by ivankozlov       ###   ########.fr       */
+/*   Created: 2019/06/26 02:43:15 by ivankozlov        #+#    #+#             */
+/*   Updated: 2019/06/26 02:48:49 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "dlist.h"
+#include "memory.h"
 
-# include "chars.h"
-# include "ft_math.h"
-# include "numbers.h"
-# include "ftstring.h"
-# include "memory.h"
-# include "output.h"
-# include "list.h"
-# include "dlist.h"
-# include "get_next_line.h"
-# include "ft_printf.h"
+void		dlstdelone(t_dlist **list, void (*del)(void *, size_t))
+{
+	if (!list || !*list || !del)
+		return ;
+	del((*list)->content, (*list)->content_size);
+	ft_free(1, *list);
+	*list = NULL;
+}
 
-#endif
+void		dlstdel(t_dlist **list, void (*del)(void *, size_t))
+{
+	if (list && *list && del)
+	{
+		dlstdel(&(*list)->next, del);
+		dlstdelone(list, del);
+	}
+}
