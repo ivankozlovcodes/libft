@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   output.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:43:40 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 20:44:34 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/06/25 05:57:14 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr(int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
+int					ft_putc(int c);
+int					ft_putc_fd(char c, int fd);
 
 #endif
