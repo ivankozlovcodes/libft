@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnchar.c                                      :+:      :+:    :+:   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/12 15:16:30 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 15:23:36 by ivankozlov       ###   ########.fr       */
+/*   Created: 2019/06/26 15:10:17 by ivankozlov        #+#    #+#             */
+/*   Updated: 2019/06/26 20:57:16 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftstring.h"
-#include "output.h"
-#include <stdlib.h>
+#include "ft_printf.h"
 
-void	ft_putnchar_fd(char c, int n, int fd)
+size_t		ft_dprintf(int fd, const char *fmt, ...)
 {
-		char	*s;
+	size_t		len;
+	va_list		args;
 
-	if (n > 0)
+	len = 0;
+	errno = 0;
+	if (fmt)
 	{
-		s = ft_strnewc(n, c);
-		ft_putstr_fd(s, fd);
-		free(s);
+		va_start(args, fmt);
+		len = ft_vprintf(fd, &args, fmt);
+		va_end(args);
 	}
-}
-
-void	ft_putnchar(char c, int n)
-{
-	char	*s;
-
-	if (n > 0)
-	{
-		s = ft_strnewc(n, c);
-		ft_putstr(s);
-		free(s);
-	}
+	return (len);
 }
