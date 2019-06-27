@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   chars.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 15:00:57 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 20:48:30 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:23:55 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # define ISSPACE2(c) (c == '\r' || c == '\v' || c == '\f')
 
 void				ft_putnstr(const char *s, size_t size);
+void				ft_putnstr_fd(const char *s, size_t n, int fd);
+void				ft_putnchar_fd(char c, int n, int fd);
 void				ft_putnchar(char c, int n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);

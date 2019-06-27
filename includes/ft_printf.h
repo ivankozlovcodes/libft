@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 09:45:05 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 22:39:09 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/06/26 20:56:23 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@
 # define TWO_BYTES_MASK (0xC080)
 # define FOUR_BYTES_MASK (0xF0808080)
 
+extern int			printf_fd;
+
 typedef struct		s_finfo
 {
 	int				modifier;
@@ -54,6 +56,8 @@ typedef struct		s_finfo
 }					t_finfo;
 
 size_t				ft_printf(const char *fmt, ...);
+size_t				ft_dprintf(int fd, const char *fmt, ...);
+size_t				ft_vprintf(int fd, va_list *args, const char *fmt);
 
 size_t				process_arg(va_list *args, char **ptr);
 

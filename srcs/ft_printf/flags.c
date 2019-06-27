@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   flags.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/11 18:28:54 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 22:44:36 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:31:17 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "output.h"
+#include "ftstring.h"
+#include "ft_printf.h"
+
+int		printf_fd;
 
 int		apply_space_flag(t_finfo *fmt)
 {
@@ -21,7 +25,7 @@ int		apply_space_flag(t_finfo *fmt)
 	f = fmt->format;
 	if (ft_strchr("di", f) && has_flag(fmt, ' ') && !*fmt->prefix)
 	{
-		ft_putchar(' ');
+		ft_putchar_fd(' ', printf_fd);
 		printed++;
 	}
 	return (printed);

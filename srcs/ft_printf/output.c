@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   output.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/09 21:03:03 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 22:43:54 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:33:45 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		printf_fd;
 
 size_t	ft_putfmtc(char c, t_finfo *fmt)
 {
@@ -19,10 +21,10 @@ size_t	ft_putfmtc(char c, t_finfo *fmt)
 	len = 1;
 	apply_flags(fmt, &c, len);
 	if (fmt->padding > 0)
-		ft_putnchar(fmt->padding_char, fmt->width - 1);
+		ft_putnchar_fd(fmt->padding_char, fmt->width - 1, printf_fd);
 	ft_putchar(c);
 	if (fmt->padding < 0)
-		ft_putnchar(fmt->padding_char, fmt->width - 1);
+		ft_putnchar_fd(fmt->padding_char, fmt->width - 1, printf_fd);
 	ft_free(1, fmt->p_string);
 	return (MAX(fmt->width, 1));
 }
@@ -41,15 +43,15 @@ size_t	ft_putfmtstr(t_finfo *fmt, char *s)
 	{
 		if (*s == '-')
 			ft_putchar(*s++);
-		ft_putstr(fmt->prefix);
+		ft_putstr_fd(fmt->prefix, printf_fd);
 	}
 	if (fmt->padding > 0)
-		ft_putnchar(fmt->padding_char, fmt->width - len);
+		ft_putnchar_fd(fmt->padding_char, fmt->width - len, printf_fd);
 	if (fmt->padding_char == ' ')
-		ft_putstr(fmt->prefix);
-	ft_putstr(s);
+		ft_putstr_fd(fmt->prefix, printf_fd);
+	ft_putstr_fd(s, printf_fd);
 	if (fmt->padding < 0)
-		ft_putnchar(fmt->padding_char, fmt->width - len);
+		ft_putnchar_fd(fmt->padding_char, fmt->width - len, printf_fd);
 	len = MAX(fmt->width, (int)len);
 	ft_free(2, s, fmt->p_string);
 	return (len);
@@ -70,15 +72,15 @@ size_t	ft_putfmtnbr(t_finfo *fmt, char *s)
 	p_len = ft_strlen(fmt->prefix);
 	padding_size = fmt->width - MAX((int)len, fmt->precision) - p_len;
 	if (fmt->padding_char == '0')
-		ft_putstr(fmt->prefix);
+		ft_putstr_fd(fmt->prefix, printf_fd);
 	if (fmt->padding > 0)
-		ft_putnchar(fmt->padding_char, padding_size);
+		ft_putnchar_fd(fmt->padding_char, padding_size, printf_fd);
 	if (fmt->padding_char == ' ')
-		ft_putstr(fmt->prefix);
-	ft_putstr(fmt->p_string);
-	ft_putstr(s);
+		ft_putstr_fd(fmt->prefix, printf_fd);
+	ft_putstr_fd(fmt->p_string, printf_fd);
+	ft_putstr_fd(s, printf_fd);
 	if (fmt->padding < 0)
-		ft_putnchar(fmt->padding_char, padding_size);
+		ft_putnchar_fd(fmt->padding_char, padding_size, printf_fd);
 	ft_free(2, *fmt->prefix == '-' ? s - 1 : s, fmt->p_string);
 	return (MAX(fmt->width, (int)len + (int)p_len));
 }

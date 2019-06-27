@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   widechar.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/09 21:07:29 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/03/27 22:41:54 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/06/26 15:29:57 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_print_wchar(wint_t c)
 			output |= (((c >> 18) & 0x7) << 24);
 	}
 	output = to_little_endian(output);
-	write(1, &output, sizeof(wchar_t));
+	write(printf_fd, &output, sizeof(wchar_t));
 	return (len);
 }
 
@@ -50,7 +50,7 @@ size_t	ft_putfmtwd(t_finfo *fmt, wchar_t *s)
 			len += ft_print_wchar(*s);
 		else
 		{
-			ft_putchar((char)*s);
+			ft_putchar_fd((char)*s, printf_fd);
 			len++;
 		}
 		s++;
