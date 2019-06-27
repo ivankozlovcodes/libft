@@ -6,13 +6,14 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/26 04:23:42 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/06/26 04:34:07 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:14:22 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dlist.h"
 
-void		dlstremove(t_dlist **list, t_dlist *item, void (*del)(void *, size_t))
+void		dlstremove(t_dlist **list, t_dlist *item,
+	void (*del)(void *, size_t))
 {
 	if (!list || !*list || !item)
 		return ;

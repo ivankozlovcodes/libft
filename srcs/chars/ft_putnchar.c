@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 15:16:30 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 15:23:36 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:14:55 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	ft_putnchar_fd(char c, int n, int fd)
 {
-		char	*s;
+	char	*s;
 
 	if (n > 0)
 	{
