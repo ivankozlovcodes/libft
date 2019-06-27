@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 09:45:05 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 20:56:23 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:15:26 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
 # define TWO_BYTES_MASK (0xC080)
 # define FOUR_BYTES_MASK (0xF0808080)
 
-extern int			printf_fd;
+extern int			g_printf_fd;
 
 typedef struct		s_finfo
 {

@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 20:44:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/25 04:41:43 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:23:40 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,10 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-void				ft_lstiteri(t_list *lst, void (*f)(size_t idx, t_list *elem));
-void				ft_lstiteriif(t_list *lst, void (*f)(size_t idx, t_list *elem),
+void				ft_lstiteri(t_list *lst,
+							void (*f)(size_t idx, t_list *elem));
+void				ft_lstiteriif(t_list *lst,
+							void (*f)(size_t idx, t_list *elem),
 							bool (*cond)(size_t idx, t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstlast(t_list *list);

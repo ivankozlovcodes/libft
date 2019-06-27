@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 21:47:54 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/06/26 07:19:10 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:23:19 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void				dlstaddfront(t_dlist **list, t_dlist *new);
 t_dlist				*dlstnew(void const *content, size_t size);
 void				dlstdel(t_dlist **list, void (*del)(void *, size_t));
 void				dlstdelone(t_dlist **list, void (*del)(void *, size_t));
-void				dlstremove(t_dlist **list, t_dlist *item, void (*del)(void *, size_t));
+void				dlstremove(t_dlist **list, t_dlist *item,
+	void (*del)(void *, size_t));
 void				dlstforeachif(t_dlist *list,
 	void (*f)(t_dlist *elem, size_t idx, t_dlist *list),
 	bool (*cond)(size_t idx, t_dlist *elem));

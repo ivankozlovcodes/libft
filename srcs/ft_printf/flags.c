@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/11 18:28:54 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 15:31:17 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:15:26 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ftstring.h"
 #include "ft_printf.h"
 
-int		printf_fd;
+int		g_printf_fd;
 
 int		apply_space_flag(t_finfo *fmt)
 {
@@ -25,7 +25,7 @@ int		apply_space_flag(t_finfo *fmt)
 	f = fmt->format;
 	if (ft_strchr("di", f) && has_flag(fmt, ' ') && !*fmt->prefix)
 	{
-		ft_putchar_fd(' ', printf_fd);
+		ft_putchar_fd(' ', g_printf_fd);
 		printed++;
 	}
 	return (printed);

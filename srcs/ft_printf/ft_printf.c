@@ -6,41 +6,40 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/04 17:04:31 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 20:56:05 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/26 21:21:42 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			printf_fd = STDOUT_FILENO;
+int		g_printf_fd = STDOUT_FILENO;
 
 size_t	ft_vprintf(int fd, va_list *args, const char *fmt)
 {
-	char	*ptr;
 	char	*start;
 	size_t	len;
 
-	printf_fd = fd;
-	ptr = (char *)fmt;
-	start = ptr;
+	g_printf_fd = fd;
+	fmt = (char *)fmt;
+	start = fmt;
 	len = 0;
-	while (*ptr)
+	while (*fmt)
 	{
-		if (*ptr == '%')
+		if (*fmt == '%')
 		{
-			ft_putnstr_fd(start, ptr - start, printf_fd);
-			len += process_arg(args, &ptr);
-			start = ptr;
-	}
+			ft_putnstr_fd(start, fmt - start, g_printf_fd);
+			len += process_arg(args, (char **)&fmt);
+			start = fmt;
+		}
 		else
 		{
 			len++;
-			ptr++;
+			fmt++;
 		}
 		if (errno == EILSEQ)
 			return (-1);
 	}
-	ft_putnstr_fd(start, ptr - start, printf_fd);
+	ft_putnstr_fd(start, fmt - start, g_printf_fd);
 	return (len);
 }
 
