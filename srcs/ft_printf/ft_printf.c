@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/04 17:04:31 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 21:21:42 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/27 17:10:25 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ int		g_printf_fd = STDOUT_FILENO;
 
 size_t	ft_vprintf(int fd, va_list *args, const char *fmt)
 {
-	char	*start;
-	size_t	len;
+	const char	*start;
+	size_t		len;
 
 	g_printf_fd = fd;
-	fmt = (char *)fmt;
 	start = fmt;
 	len = 0;
 	while (*fmt)
