@@ -65,5 +65,6 @@ char				*ft_strstrend(char *haystack, char *needle);
 
 bool				strisalnum(const char *s);
 bool				strendswith(const char *s1, const char *s2);
+char				*getfilename(const char *path);
 
 #endif
