@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 17:16:16 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/06/27 17:27:47 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/28 02:29:27 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 
 # define BRBLU    "\x1B[34;1m"
 
+# define BOLD    "\e[1m"
 # define REVERSE "\033[7m"
 # define UNDLINE "\033[4m"
 
