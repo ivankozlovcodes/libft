@@ -64,5 +64,6 @@ char				*ft_strstr(char *haystack, char *needle);
 char				*ft_strstrend(char *haystack, char *needle);
 
 bool				strisalnum(const char *s);
+bool				strendswith(const char *s1, const char *s2);
 
 #endif
