@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 15:00:57 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/06/26 15:23:55 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/06/28 02:04:37 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define ISSPACE(c) (ISSPACE1(c) || ISSPACE2(c))
 # define ISSPACE1(c) (c == ' ' || c == '\t' || c == '\n')
 # define ISSPACE2(c) (c == '\r' || c == '\v' || c == '\f')
+# define ISPRINT(c) (c >= 0x20 && c <= 0x7e)
 
 void				ft_putnstr(const char *s, size_t size);
 void				ft_putnstr_fd(const char *s, size_t n, int fd);
