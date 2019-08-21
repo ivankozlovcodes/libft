@@ -6,7 +6,7 @@
 #    By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 13:22:14 by ikozlov           #+#    #+#              #
-#    Updated: 2019/06/26 03:09:45 by ivankozlov       ###   ########.fr        #
+#    Updated: 2019/07/15 15:37:38 by ivankozlov       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ GNL_DIR			= get_next_line/
 STRUCTURES_DIR	= structures/
 DSTRING_DIR		= dstring/
 DICT_DIR		= dictionary/
+BTREE_DIR		= btree/
 
 # compiler
 ifeq (${C_ENV}, DEV)
@@ -62,6 +63,7 @@ SRC += $(wildcard $(SRC_DIR)$(MATRIX_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(STRUCTURES_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(DSTRING_DIR)*.c)
 SRC += $(wildcard $(SRC_DIR)$(DICT_DIR)*.c)
+SRC += $(wildcard $(SRC_DIR)$(BTREE_DIR)*.c)
 OBJ := $(notdir $(SRC))
 OBJ := $(patsubst %, $(OBJ_DIR)%, $(OBJ:.c=.o))
 
