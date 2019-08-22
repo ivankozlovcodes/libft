@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   btree.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: batman <ikozlov@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 14:44:10 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/07/15 15:28:29 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/08/22 12:17:32 by batman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,12 @@ typedef struct s_btree_node	t_btree_node;
 */
 
 t_btree_node				*new_btree_node(void *content, size_t content_size);
+
+/*
+**	srcs/btree/free_node.c
+*/
+
+void						*free_node(t_btree_node *node,
+	void (*free_content)(void *, size_t));
 
 #endif
