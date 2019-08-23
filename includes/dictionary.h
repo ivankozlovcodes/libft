@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dictionary.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: batman <ikozlov@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 18:08:13 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/24 22:40:20 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/08/22 21:07:09 by batman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ void							dict_print(t_dict *d, const char *format);
 
 char							**dict_to_darr(t_dict *d,
 	char *(pair_to_str)(t_dict_pair));
+
+char							*pair_to_str(t_dict_pair pair, char *connector);
 
 #endif
