@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   numbers.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: batman <ikozlov@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 16:48:29 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/04 12:08:08 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/08/27 15:59:03 by batman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define FT_NUMBERS_H
 
 # include <stddef.h>
+
+/*
+**	Convert 4 bytes to int in litte endian
+*/
+# define CHARPTR_TO_INT(ptr) (to_little_endian(*(int *)(ptr)))
 
 size_t			ft_nbrlen(void *n);
 char			*ft_nbrtobase(unsigned long long n, char *base);
