@@ -27,6 +27,7 @@ typedef struct s_string		t_string;
 # define DEFAULT_CAPACITY 1024
 
 t_string					*string_init(size_t capacity);
+void						string_init_content(t_string *s, size_t capacity);
 bool						string_append(struct s_string *s, char *add);
 bool						string_appendn(struct s_string *s,
 	char *add, size_t n);
