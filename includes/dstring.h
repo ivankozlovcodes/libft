@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dstring.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/16 23:30:09 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/07/10 08:37:33 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/08/31 19:28:47 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void						string_init_content(t_string *s, size_t capacity);
 bool						string_append(struct s_string *s, char *add);
 bool						string_appendn(struct s_string *s,
 	char *add, size_t n);
+bool						string_insert(t_string *s, char *add, int pos);
 char						*string_destroy(t_string *s, bool save_content);
 void						string_destroy_content(t_string *s);
 void						string_clear_content(t_string *s);
