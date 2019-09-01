@@ -32,6 +32,7 @@ bool						string_appendn(struct s_string *s,
 	char *add, size_t n);
 char						*string_destroy(t_string *s, bool save_content);
 void						string_destroy_content(t_string *s);
+void						string_clear_content(t_string *s);
 bool						string_splice(t_string *s,
 	int start, int delete_count);
 bool						string_realloc(t_string *s, char *add);
