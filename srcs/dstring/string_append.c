@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   string_append.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/16 23:39:06 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/07/10 08:39:44 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/08/31 12:30:05 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,15 @@ bool		string_append(struct s_string *s, char *add)
 {
 	size_t	len;
 	size_t	capacity;
+	bool	success;
 
 	len = ft_strlen(add);
 	capacity = s->capacity;
-	while (capacity < len + s->length + 1)
-		capacity *= 2;
-	if (capacity > s->capacity)
+	success = string_realloc(s, add);
+	if (success)
 	{
-		s->capacity = capacity;
-		s->content = ft_realloc(s->content, s->length, s->capacity);
-		if (!s->content)
-			return (false);
-	}
-	else
 		ft_strcpy(s->content + s->length, add);
-	s->length += len;
-	return (false);
+		s->length += len;
+	}
+	return (success);
 }
