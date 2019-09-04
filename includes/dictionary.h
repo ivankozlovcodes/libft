@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dictionary.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batman <ikozlov@student.42.us.org>         +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 18:08:13 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/08/22 21:07:09 by batman           ###   ########.fr       */
+/*   Updated: 2019/09/04 13:33:12 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ void							dict_destroy(t_dict *d);
 size_t							dict_index_of(t_dict *d, char *key);
 bool							dict_insert(t_dict *d, char *key, void *val);
 void							dict_remove(t_dict *d, char *key);
-void							*dict_find(t_dict *d, char *key);
+void							*dict_find(t_dict *d,
+	char *key, bool duplicate);
 
 void							dict_print(t_dict *d, const char *format);
 
